@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{pages-cart.css}">
+</head>
+<body>
+<h1 th:if="${flag=='yes'}">1</h1>
+<h1 th:unless="${flag=='yes'}">2</h1>
+<br>
+<div th:switch="${menu}">
+    <h1 th:case="admin">user is admin</h1>
+    <h1 th:case="${manager}">user is manager</h1>
+</div>
+<br>
+<!--引入片段-->
+<div th:insert="~{footer :: copy}"></div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span th:text="${username}"></span>
+<br>
+<input type="text" th:value="${username}">
+
+<!--字符串拼接-->
+<span th:text="'欢迎' + ${username} + '来访'"></span>
+<br>
+<span th:text="|欢迎${username}来访|"></span>
+
+</body>
+</html>
